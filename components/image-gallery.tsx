@@ -35,23 +35,23 @@ export function ImageGallery() {
     }, [])
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {images.map((image, index) => (
                 <div
                     key={index}
-                    className="relative h-[300px] md:h-[600px] w-full overflow-hidden rounded-2xl"
+                    className="relative h-[200px] sm:h-[250px] md:h-[300px] w-full overflow-hidden rounded-2xl"
                     style={{
                         transform: `translateY(${scrollY * 0.1 * (index % 2 ? 1 : -1)}px)`,
                     }}
                 >
                     <Image
-                        src={image.url || "/placeholder.svg?height=600&width=400"}
+                        src={image.url || "/placeholder.svg?height=300&width=300"}
                         alt={image.title}
                         fill
                         className="object-cover transition-transform duration-700 hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-                        <h3 className="text-xl font-bold text-primary-foreground">{image.title}</h3>
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex items-end p-4 sm:p-6">
+                        <h3 className="text-sm sm:text-base md:text-xl font-bold text-primary-foreground">{image.title}</h3>
                     </div>
                 </div>
             ))}

@@ -1,17 +1,5 @@
 "use client"
-
-import {
-  ArrowRight,
-  Crown,
-  Dumbbell,
-  Sparkles,
-  Trophy,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
-  Youtube,
-} from "lucide-react"
+import { ArrowRight, Trophy, Crown, Sparkles, Dumbbell } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 
@@ -23,6 +11,7 @@ import { MobileMenu } from "@/components/mobile-menu"
 import { VideoGallery } from "@/components/video-gallery"
 import { ImageGallery } from "@/components/image-gallery"
 import { TransformationSlider } from "@/components/transformation-slider"
+import { Instagram, Facebook, Twitter, Youtube, Linkedin } from "lucide-react"
 
 export default function Page() {
   const [scrollY, setScrollY] = useState(0)
@@ -59,7 +48,6 @@ export default function Page() {
   }, [])
 
   const handleStartTransformation = () => {
-    // Scroll to contact form
     const contactSection = document.getElementById("contact")
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" })
@@ -73,7 +61,7 @@ export default function Page() {
         <source src="/trainer-background.mp4" type="video/mp4" />
       </video>
 
-      {/* Navigation - Updated with Link to VIP area */}
+      {/* Navigation */}
       <header className="fixed top-0 z-50 w-full">
         <div className="container mx-auto">
           <nav className="glass-effect flex items-center justify-between px-6 py-4 mt-4 rounded-full border border-white/10">
@@ -184,8 +172,8 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Transformations Section - Updated with Slider */}
-        <section id="transformations" className="py-20 relative">
+        {/* Transformations Section */}
+        <section id="transformations" className="py-20 relative z-20">
           <div className="container mx-auto px-6">
             <h2 className="font-playfair text-4xl md:text-5xl text-center mb-12">
               {t.transformations.title} <span className="text-gradient">{t.transformations.titleHighlight}</span>
@@ -194,7 +182,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Programs Section - Updated card styles */}
+        {/* Programs Section */}
         <section id="programs" className="py-20 relative">
           <div className="container mx-auto px-6">
             <h2 className="font-playfair text-4xl md:text-5xl text-center mb-12">
@@ -277,7 +265,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Contact Section - Updated form styles */}
+        {/* Contact Section */}
         <section id="contact" className="py-20 relative">
           <div className="container mx-auto px-6">
             <div className="glass-effect max-w-4xl mx-auto rounded-2xl p-8 md:p-12 border border-white/10">
@@ -312,7 +300,7 @@ export default function Page() {
         </section>
       </main>
 
-      {/* Footer - Updated styles */}
+      {/* Footer */}
       <footer className="py-12 relative">
         <div className="container mx-auto px-6">
           <div className="glass-effect rounded-2xl p-8 border border-white/10">

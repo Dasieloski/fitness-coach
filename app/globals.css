@@ -111,3 +111,9 @@
 .image-hover-zoom:hover {
   transform: scale(1.05);
 }
+
+.video-gallery-title,
+.image-gallery-title {
+  color: var(--foreground);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
