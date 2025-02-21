@@ -47,6 +47,7 @@ export function ImageGallery() {
                     <Image
                         src={image.url || "/placeholder.svg?height=300&width=300"}
                         alt={image.title}
+                        loading="lazy"
                         fill
                         className="object-cover transition-transform duration-700 hover:scale-110"
                     />

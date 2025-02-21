@@ -25,7 +25,7 @@ export function VideoGallery() {
     return (
         <div className="relative w-full h-screen overflow-hidden">
             <div className="absolute inset-0 bg-background/50 z-[1]" />
-            <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover" muted loop autoPlay playsInline>
+            <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover" preload="auto" muted loop autoPlay playsInline>
                 <source src={videos[0].url} type="video/mp4" />
                 Tu navegador no soporta el elemento video.
             </video>
