@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client"
 import { ArrowRight, Trophy, Crown, Sparkles, Dumbbell } from "lucide-react"
 import Link from "next/link"

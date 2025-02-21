@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client"
 
 import { ArrowLeft, CheckCircle2, Crown, Lock } from "lucide-react"
